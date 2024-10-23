@@ -1,4 +1,8 @@
 
+h1 {
+    font-size: 18px;
+    margin-top: 10px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -64,7 +68,7 @@ p {
     background-color: #35404c;
     color: beige;
     border-radius: 8px;
-    text-align: center;
+    text-align: center; /* Ensures the text is centered */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid #2ec4b6;
     width: 50%;
@@ -80,26 +84,37 @@ p {
 
 .flex-school {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack vertically by default */
     align-items: center;
     justify-content: center;
-    margin-right: 275px;
-    margin-bottom: 7%;
-    width: 100%;
-    padding-top: 1px;
-    padding-bottom: 50px; /* Add padding to the bottom */
+    gap: 30px;
+    padding: 20px 0;
 }
 
+.school-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+}
 
+#FTHS:hover, #LCCC:hover, #GRC:hover {
+    height: 200px;
+    width: 200px;
+    animation: blob 3s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
 
 #FTHS, #LCCC, #GRC {
-    height: 150px;
-    width: 150px;
-    margin-top: 75px;
-    border-radius: 100%; 
-    transition: all 1s ease-in-out;
-    
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
 }
+
+
 @keyframes blob {
     0% {
         border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
@@ -110,10 +125,4 @@ p {
     100% {
         border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
     }
-}
-#FTHS:hover, #LCCC:hover, #GRC:hover{
-    height: 200px;
-    width: 200px;
-    animation: blob 3s ease-in-out infinite;
-    transition: all is ease-in-out;
 }
